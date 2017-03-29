@@ -38,6 +38,22 @@
             tools:text="Captain America"
             />
 
+        <TextView
+            android:id="@+id/tvOverview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginLeft="@dimen/activity_small_margin"
+            android:layout_marginTop="@dimen/activity_small_margin"
+            android:layout_toEndOf="@+id/ivMovieImage"
+            android:layout_toRightOf="@+id/ivMovieImage"
+            android:maxLength="190"
+            tools:text="Captain America Overview"
+
+
+
+            />
+
     </RelativeLayout>
 
 
