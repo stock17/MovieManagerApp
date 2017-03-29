@@ -48,11 +48,7 @@
             android:layout_toEndOf="@+id/ivMovieImage"
             android:layout_toRightOf="@+id/ivMovieImage"
             android:maxLength="190"
-            tools:text="Captain America Overview"
-
-
-
-            />
+            tools:text="Captain America Overview" />
 
     </RelativeLayout>
 

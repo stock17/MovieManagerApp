@@ -1,7 +1,6 @@
 package com.example.yury.moviemanagerapp.adapters;
 
 import android.content.Context;
-
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.yury.moviemanagerapp.R;
-//import com.example.yury.moviemanagerapp.models.Movie;
+import com.example.yury.moviemanagerapp.models.Movie;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -19,25 +18,22 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * Created by Yury on 29.03.2017.
-
 
 public class MovieRecyclerViewAdapter extends RecyclerView.Adapter<MovieRecyclerViewAdapter.ViewHolder> {
 
     List<Movie> movies;
     Context context;
+    @BindView(R.id.tvOverview)
+    TextView tvOverview;
 
-    MovieRecyclerViewAdapter (Context context, List<Movie> movies) {
+    MovieRecyclerViewAdapter(Context context, List<Movie> movies) {
         this.movies = movies;
         this.context = context;
-
     }
 
-    private Context getContext () {
+    private Context getContext() {
         return context;
     }
-
 
 
     @Override
@@ -64,13 +60,16 @@ public class MovieRecyclerViewAdapter extends RecyclerView.Adapter<MovieRecycler
         return movies.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.ivMovieImage)
         ImageView ivMovieImage;
         @BindView(R.id.tvTitle)
         TextView tvTitle;
+        @BindView(R.id.tvOverview)
+        TextView tvOverview;
         @BindView(R.id.cvMovie)
         CardView cvMovie;
+
 
         ViewHolder(View view) {
             super(view);
@@ -78,4 +77,3 @@ public class MovieRecyclerViewAdapter extends RecyclerView.Adapter<MovieRecycler
         }
     }
 }
-*/
