@@ -6,7 +6,7 @@ public class Movie {
     String posterPath, backdropPath;
     float voteAverage, voteCount;
 
-    public Movie(String id, String title, String overview, String posterPath, String backdropPath, float voteAverage, float voteCount) {
+    public Movie(String id, String title, String overview, float voteAverage, float voteCount, String posterPath, String backdropPath) {
         this.id = id;
         this.title = title;
         this.overview = overview;

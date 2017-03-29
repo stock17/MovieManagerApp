@@ -26,7 +26,7 @@ public class MovieRecyclerViewAdapter extends RecyclerView.Adapter<MovieRecycler
     @BindView(R.id.tvOverview)
     TextView tvOverview;
 
-    MovieRecyclerViewAdapter(Context context, List<Movie> movies) {
+    public MovieRecyclerViewAdapter(Context context, List<Movie> movies) {
         this.movies = movies;
         this.context = context;
     }
