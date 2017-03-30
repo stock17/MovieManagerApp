@@ -3,6 +3,7 @@ package com.example.yury.moviemanagerapp.adapters;
 import android.content.Context;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,8 +24,6 @@ public class MovieRecyclerViewAdapter extends RecyclerView.Adapter<MovieRecycler
 
     List<Movie> movies;
     Context context;
-    @BindView(R.id.tvOverview)
-    TextView tvOverview;
 
     public MovieRecyclerViewAdapter(Context context, List<Movie> movies) {
         this.movies = movies;
@@ -46,8 +45,12 @@ public class MovieRecyclerViewAdapter extends RecyclerView.Adapter<MovieRecycler
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Movie movie = movies.get(position);
+
         holder.tvTitle.setText(movie.getTitle());
         holder.tvOverview.setText(movie.getOverview());
+
+        Log.d("movie url", movie.getPosterPath());
+
 
         Picasso.with(getContext())
                 .load(movie.getPosterPath())
