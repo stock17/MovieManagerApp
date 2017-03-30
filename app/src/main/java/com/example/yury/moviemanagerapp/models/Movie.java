@@ -1,7 +1,9 @@
 package com.example.yury.moviemanagerapp.models;
 
 
-public class Movie {
+import java.io.Serializable;
+
+public class Movie implements Serializable{
     String id, title, overview;
     String posterPath, backdropPath;
     float voteAverage, voteCount;
@@ -58,7 +60,7 @@ public class Movie {
 
     public String getPosterPath() {
         return String.format("https://image.tmdb.org/t/p/w342%s", posterPath);
-        //return "https://image.tmdb.org/t/p/w342" + posterPath;
+
     }
 
     public String getBackdropPath() {
