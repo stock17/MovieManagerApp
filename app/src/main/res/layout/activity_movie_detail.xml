@@ -20,7 +20,19 @@
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:collapsedTitleTextAppearance="@style/TextAppearance.Design.CollapsingToolbar.Expanded.Shadow"
+            android:expandedTitleMarginEnd="64dp"
+            android:expandedTitleMarginStart="48dp">
+
+            <ImageView
+                android:id="@+id/ivMovieBackdrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+                android:scaleType="centerCrop"
+                android:layout_collapseMode="parallax"
+                android:minHeight="@dimen/activity_detail_backdrop_min_height"/>
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
