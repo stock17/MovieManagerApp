@@ -60,11 +60,10 @@ public class Movie implements Serializable{
 
     public String getPosterPath() {
         return String.format("https://image.tmdb.org/t/p/w342%s", posterPath);
-
     }
 
     public String getBackdropPath() {
-        return backdropPath;
+        return String.format("https://image.tmdb.org/t/p/w780%s", backdropPath);
     }
 
     public float getVoteAverage() {
